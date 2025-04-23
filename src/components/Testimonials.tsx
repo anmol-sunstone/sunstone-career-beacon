@@ -13,7 +13,7 @@ const Testimonials = () => {
       name: "Rinky Singh",
       position: "Marketing",
       quote: "People I work with at Sunstone give me the freedom to be myself, and I see myself growing as an individual. The focus on ethics in whatever we do are the things that stand out the most to me. My time here in such a forward-thinking, fast-paced environment has given me an unparalleled experience.",
-      image: "/lovable-uploads/0c451bab-6e54-4605-a7bf-3d3b9aaf9771.png"
+      image: "/lovable-uploads/5d6d6563-ffae-4e9c-99a2-be5986cdc87a.png"
     },
     {
       name: "Arpit Sarda",
