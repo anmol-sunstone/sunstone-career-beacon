@@ -20,7 +20,7 @@ const Testimonials = () => {
       name: "Arpit Sarda",
       position: "Business",
       quote: "At Sunstone, you surround yourself with highly driven people who bring their hearts to work. All our daily discussions are anchored in one core belief - \"Is it right for the student?\" A workplace with such strong values is bound to bring out the best in you.",
-      image: "/lovable-uploads/040c7f6b-9049-4b1c-9354-7a3d737e2ae3.png"
+      image: "/lovable-uploads/15dd3048-f4e5-4eaf-80d0-1fda35e89243.png"
     },
     {
       name: "Guddan",
