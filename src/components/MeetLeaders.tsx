@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const MeetLeaders = () => {
@@ -6,7 +5,7 @@ const MeetLeaders = () => {
     {
       name: "Ashish Munjal",
       role: "Co-founder & CEO",
-      image: "/lovable-uploads/66ea4c75-b9d5-48e6-88d1-2f5d537b06cf.png"
+      image: "/lovable-uploads/2e904963-79ce-4c13-9b81-8c21fd7e32a0.png"
     },
     {
       name: "Piyush Nangru",
