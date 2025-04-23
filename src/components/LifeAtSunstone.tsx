@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const LifeAtSunstone = () => {
-  const [activeSlide, setActiveSlide] = useState(0);
+  const [startIndex, setStartIndex] = useState(0);
 
   const images = [
     "/lovable-uploads/52f98796-9ee7-422e-a474-27588b7c9669.png",
@@ -15,12 +15,14 @@ const LifeAtSunstone = () => {
   ];
 
   const nextSlide = () => {
-    setActiveSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setStartIndex((prev) => (prev + 3 >= images.length ? 0 : prev + 3));
   };
 
   const prevSlide = () => {
-    setActiveSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setStartIndex((prev) => (prev === 0 ? Math.floor((images.length - 1) / 3) * 3 : prev - 3));
   };
+
+  const visibleImages = images.slice(startIndex, startIndex + 3);
 
   return (
     <section className="py-16 px-4 md:px-8 bg-gray-50">
@@ -32,19 +34,17 @@ const LifeAtSunstone = () => {
         <h3 className="text-2xl font-semibold text-center mb-12">Work Hard, Celebrate Harder!</h3>
 
         {/* Carousel */}
-        <div className="relative max-w-4xl mx-auto mb-16">
+        <div className="relative max-w-6xl mx-auto mb-16">
           <div className="overflow-hidden rounded-xl shadow-xl">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${activeSlide * 100}%)` }}
-            >
-              {images.map((image, index) => (
-                <img 
-                  key={index} 
-                  src={image} 
-                  alt={`Life at Sunstone ${index + 1}`} 
-                  className="w-full h-[400px] md:h-[600px] object-contain bg-white flex-shrink-0"
-                />
+            <div className="grid grid-cols-3 gap-4">
+              {visibleImages.map((image, index) => (
+                <div key={index} className="aspect-w-4 aspect-h-3">
+                  <img 
+                    src={image} 
+                    alt={`Life at Sunstone ${startIndex + index + 1}`} 
+                    className="w-full h-[200px] md:h-[300px] object-contain bg-white"
+                  />
+                </div>
               ))}
             </div>
           </div>
@@ -52,7 +52,7 @@ const LifeAtSunstone = () => {
           {/* Carousel Controls */}
           <button 
             onClick={prevSlide} 
-            className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md"
+            className="absolute top-1/2 -left-12 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md"
             aria-label="Previous slide"
           >
             <ChevronLeft size={24} className="text-sunstone-blue" />
@@ -60,7 +60,7 @@ const LifeAtSunstone = () => {
           
           <button 
             onClick={nextSlide} 
-            className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md"
+            className="absolute top-1/2 -right-12 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md"
             aria-label="Next slide"
           >
             <ChevronRight size={24} className="text-sunstone-blue" />
@@ -68,14 +68,14 @@ const LifeAtSunstone = () => {
           
           {/* Dots */}
           <div className="flex justify-center mt-4">
-            {images.map((_, index) => (
+            {Array.from({ length: Math.ceil(images.length / 3) }).map((_, index) => (
               <button
                 key={index}
-                onClick={() => setActiveSlide(index)}
+                onClick={() => setStartIndex(index * 3)}
                 className={`w-3 h-3 mx-1 rounded-full ${
-                  activeSlide === index ? "bg-sunstone-blue" : "bg-gray-300"
+                  Math.floor(startIndex / 3) === index ? "bg-sunstone-blue" : "bg-gray-300"
                 }`}
-                aria-label={`Go to slide ${index + 1}`}
+                aria-label={`Go to slide group ${index + 1}`}
               />
             ))}
           </div>
