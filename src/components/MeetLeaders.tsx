@@ -11,7 +11,7 @@ const MeetLeaders = () => {
     {
       name: "Piyush Nangru",
       role: "Co-founder & COO",
-      image: "/lovable-uploads/ff978e56-24c4-4978-bb50-c0219c00b4b7.png"
+      image: "/lovable-uploads/40907d23-dd16-470b-ac4e-5a32e1e75ca9.png"
     },
     {
       name: "Ankur Jain",
