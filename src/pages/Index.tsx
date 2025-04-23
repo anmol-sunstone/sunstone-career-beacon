@@ -1,8 +1,9 @@
+
 import React from 'react';
 import Header from '@/components/Header';
 import CareerIntro from '@/components/CareerIntro';
-import LifeAtSunstone from '@/components/LifeAtSunstone';
 import MeetLeaders from '@/components/MeetLeaders';
+import LifeAtSunstone from '@/components/LifeAtSunstone';
 import WhyJoinUs from '@/components/WhyJoinUs';
 import LocationSection from '@/components/LocationSection';
 import HiringSection from '@/components/HiringSection';
@@ -15,8 +16,8 @@ const Index = () => {
       <Header />
       <main>
         <CareerIntro />
-        <LifeAtSunstone />
         <MeetLeaders />
+        <LifeAtSunstone />
         <WhyJoinUs />
         <LocationSection />
         <HiringSection />

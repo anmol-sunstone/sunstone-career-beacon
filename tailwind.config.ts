@@ -21,7 +21,7 @@ export default {
 			colors: {
 				sunstone: {
 					blue: '#012F6C',
-					orange: '#FDAE1D',
+					orange: '#c88c32',
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
