@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const MeetLeaders = () => {
@@ -14,7 +15,7 @@ const MeetLeaders = () => {
     },
     {
       name: "Ankur Jain",
-      role: "Co-founder & CTO",
+      role: "Co-founder & CBO",
       image: "/lovable-uploads/66dafd2f-dcbf-4701-a272-4139e19f4c7f.png"
     }
   ];
@@ -43,14 +44,6 @@ const MeetLeaders = () => {
               Sunstone is transforming India's future workforce, one student at a time, and we proudly invite 
               you to take the first step towards your dream job with us!
             </p>
-
-            <div className="pt-6">
-              <img 
-                src="/lovable-uploads/aac9a65f-7b44-43a2-a961-24637955e0e7.png" 
-                alt="Founders' Signatures" 
-                className="max-w-full mx-auto"
-              />
-            </div>
           </div>
           
           <div className="grid gap-6">
@@ -75,3 +68,4 @@ const MeetLeaders = () => {
 };
 
 export default MeetLeaders;
+
