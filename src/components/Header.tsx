@@ -4,15 +4,6 @@ import React from 'react';
 const Header = () => {
   return (
     <header className="relative">
-      {/* Logo */}
-      <div className="absolute top-8 left-8 z-10">
-        <img 
-          src="https://sunstone.in/_next/image?url=https%3A%2F%2Fcdn-eu.aglty.io%2Fsunstoneuniversity%2FAttachments%2FNewItems%2FGroup%20(1)%20(1)_20220516165429_0.png&w=256&q=75" 
-          alt="Sunstone Logo" 
-          className="h-16 md:h-20"
-        />
-      </div>
-
       {/* Banner */}
       <div className="hero-banner h-[80vh] relative flex items-center justify-center text-white">
         <div 

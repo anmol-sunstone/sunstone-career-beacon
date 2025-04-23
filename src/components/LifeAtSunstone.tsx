@@ -6,10 +6,12 @@ const LifeAtSunstone = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const images = [
-    "https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=800",
-    "https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=800",
-    "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=800",
-    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800"
+    "/lovable-uploads/52f98796-9ee7-422e-a474-27588b7c9669.png",
+    "/lovable-uploads/1e71b67d-9eec-4160-acdd-8a916104c083.png",
+    "/lovable-uploads/d1cca07f-c291-46e6-ba0f-62c7a78f4ffb.png",
+    "/lovable-uploads/884f2bef-d86f-4fbc-b84f-70e0d3f03c2a.png",
+    "/lovable-uploads/bd89d4c0-4dcf-43a4-8edf-fbe20d87cf95.png",
+    "/lovable-uploads/20518657-23d0-4fda-a2d9-84c2b97f43f0.png"
   ];
 
   const nextSlide = () => {
@@ -41,7 +43,7 @@ const LifeAtSunstone = () => {
                   key={index} 
                   src={image} 
                   alt={`Life at Sunstone ${index + 1}`} 
-                  className="w-full h-[400px] object-cover flex-shrink-0"
+                  className="w-full h-[400px] md:h-[600px] object-contain bg-white flex-shrink-0"
                 />
               ))}
             </div>
