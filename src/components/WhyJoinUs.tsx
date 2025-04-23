@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { 
   TrendingUp, 
@@ -113,66 +114,6 @@ const WhyJoinUs = () => {
               </div>
               <p><strong>Flexible Work:</strong> Hybrid work model with the flexibility to work remotely.</p>
             </div>
-          </div>
-        </div>
-
-        {/* Career Impact Section */}
-        <div className="bg-white p-8 rounded-xl shadow-md mb-8">
-          <h3 className="text-3xl font-bold text-center text-sunstone-blue mb-8">
-            Ready to Do the Most Meaningful Work of Your Career?
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div className="flex items-start gap-4">
-              <span className="text-2xl">👩‍💻</span>
-              <div>
-                <h4 className="font-semibold text-lg mb-2">Drive Innovation</h4>
-                <p className="text-gray-600">Lead groundbreaking projects that shape the future of education</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4">
-              <span className="text-2xl">🎯</span>
-              <div>
-                <h4 className="font-semibold text-lg mb-2">Own Your Impact</h4>
-                <p className="text-gray-600">Take ownership of initiatives that directly affect thousands of students</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4">
-              <span className="text-2xl">📈</span>
-              <div>
-                <h4 className="font-semibold text-lg mb-2">Scale Rapidly</h4>
-                <p className="text-gray-600">Grow alongside one of India's fastest-expanding edtech companies</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4">
-              <span className="text-2xl">🌱</span>
-              <div>
-                <h4 className="font-semibold text-lg mb-2">Learn Continuously</h4>
-                <p className="text-gray-600">Access mentorship, training, and development opportunities</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4 md:col-span-2 mx-auto">
-              <span className="text-2xl">🤝</span>
-              <div>
-                <h4 className="font-semibold text-lg mb-2">Collaborate Fearlessly</h4>
-                <p className="text-gray-600">Work with diverse, talented teams who challenge and support you</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="text-center">
-            <a 
-              href="https://www.notion.so/sunstonecareers/Open-positions-at-Sunstone-1d5cc35f259e80f8bb03e79251ccc00a"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="sunstone-button inline-block bg-sunstone-blue text-white font-semibold px-8 py-3 rounded-lg text-lg shadow-md hover:bg-blue-800 transition-colors duration-300"
-            >
-              View Openings
-            </a>
           </div>
         </div>
       </div>
