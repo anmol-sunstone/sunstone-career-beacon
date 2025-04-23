@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   Carousel,
@@ -26,7 +25,7 @@ const Testimonials = () => {
       name: "Guddan",
       position: "Inside Sales",
       quote: "I have been working here for the last 8 months and I don't think I could've found a workplace better than Sunstone, as they take pride in maintaining work-life balance and encouraging employees to grow. I could not be happier with my current role, work environment and ability to progress.",
-      image: "/lovable-uploads/71b3c83e-1e14-426a-964d-5ab18fc679ef.png"
+      image: "/lovable-uploads/5e00d00e-85d9-4bf2-b639-b42fd7c56e86.png"
     },
     {
       name: "Devashish Pandey",
