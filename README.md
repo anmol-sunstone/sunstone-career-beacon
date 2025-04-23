@@ -1,73 +1,72 @@
-# Welcome to your Lovable project
 
-## Project info
+# Sunstone Careers Website
 
-**URL**: https://lovable.dev/projects/d7b9cb0e-77fc-413d-910f-a69e30223649
+## Project Overview
+This is the careers website for Sunstone, designed to attract and engage potential talent by showcasing the company's culture, opportunities, and values.
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/d7b9cb0e-77fc-413d-910f-a69e30223649) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
+## Technologies Used
+- React
 - Vite
 - TypeScript
-- React
-- shadcn-ui
 - Tailwind CSS
+- Shadcn/UI
+- Embla Carousel
 
-## How can I deploy this project?
+## Local Development Setup
 
-Simply open [Lovable](https://lovable.dev/projects/d7b9cb0e-77fc-413d-910f-a69e30223649) and click on Share -> Publish.
+### Prerequisites
+- Node.js (v18 or later)
+- npm or yarn
 
-## Can I connect a custom domain to my Lovable project?
+### Installation Steps
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Yes, you can!
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Deployment to Vercel
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Automatic Deployment
+- This project is configured to deploy seamlessly on Vercel
+- Push to the main branch will trigger an automatic deployment
+
+### Manual Deployment
+1. Install Vercel CLI:
+   ```bash
+   npm install -g vercel
+   ```
+
+2. Login to Vercel:
+   ```bash
+   vercel login
+   ```
+
+3. Deploy the project:
+   ```bash
+   vercel
+   ```
+
+## Environment Variables
+No specific environment variables are required for this project.
+
+## Customization
+- Update `/src/components/Header.tsx` for banner content
+- Modify career sections in respective component files
+- Update images in the `/public/lovable-uploads/` directory
+
+## Performance Optimization
+- Images are optimized
+- Tailwind CSS for efficient styling
+- React SWC for fast compilation
+
+## Support
+For any issues or questions, contact the Sunstone tech team.
+
+## License
+Private - Sunstone Internal Use
