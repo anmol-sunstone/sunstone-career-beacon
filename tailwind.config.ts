@@ -19,6 +19,10 @@ export default {
 		},
 		extend: {
 			colors: {
+				sunstone: {
+					blue: '#012F6C',
+					orange: '#FDAE1D',
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
