@@ -55,7 +55,16 @@ const WhyJoinUs = () => {
           </div>
         </div>
         
-        {/* Great Place To Work */}
+        {/* Great Place to Work Banner */}
+        <div className="mx-[-1rem] md:mx-[-2rem] lg:mx-[-4rem] xl:mx-[-8rem] mb-12">
+          <img 
+            src="/lovable-uploads/2536c168-96a3-4184-a7f1-c20d87f75e17.png"
+            alt="Great Place to Work Banner"
+            className="w-full h-auto"
+          />
+        </div>
+
+        {/* Great Place To Work Content */}
         <div className="bg-white p-8 rounded-xl shadow-md mb-12">
           <h3 className="text-2xl font-bold text-center text-sunstone-blue mb-6">
             Sunstone is Awarded with Great Place to Work!
