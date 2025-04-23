@@ -33,7 +33,7 @@ const LifeAtSunstone = () => {
         </h2>
         <h3 className="text-2xl font-semibold text-center mb-12">Work Hard, Celebrate Harder!</h3>
 
-        {/* Carousel */}
+        {/* Carousel Section */}
         <div className="relative max-w-6xl mx-auto mb-16">
           <div className="overflow-hidden rounded-xl shadow-xl">
             <div className="grid grid-cols-3 gap-4">
@@ -78,6 +78,80 @@ const LifeAtSunstone = () => {
                 aria-label={`Go to slide group ${index + 1}`}
               />
             ))}
+          </div>
+        </div>
+
+        {/* Career Impact Section */}
+        <div className="mt-20 bg-white rounded-xl shadow-lg overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Content Column */}
+            <div className="p-8 lg:p-12">
+              <h3 className="text-3xl font-bold text-sunstone-blue mb-8">
+                Ready to Do the Most Meaningful Work of Your Career?
+              </h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4 group hover:transform hover:translate-x-2 transition-transform">
+                  <span className="text-2xl flex-shrink-0 mt-1">👩‍💻</span>
+                  <div>
+                    <h4 className="font-semibold text-lg text-gray-800">Drive Innovation</h4>
+                    <p className="text-gray-600">Lead groundbreaking projects that shape the future of education</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 group hover:transform hover:translate-x-2 transition-transform">
+                  <span className="text-2xl flex-shrink-0 mt-1">🎯</span>
+                  <div>
+                    <h4 className="font-semibold text-lg text-gray-800">Own Your Impact</h4>
+                    <p className="text-gray-600">Take ownership of initiatives that directly affect thousands of students</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 group hover:transform hover:translate-x-2 transition-transform">
+                  <span className="text-2xl flex-shrink-0 mt-1">📈</span>
+                  <div>
+                    <h4 className="font-semibold text-lg text-gray-800">Scale Rapidly</h4>
+                    <p className="text-gray-600">Grow alongside one of India's fastest-expanding edtech companies</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 group hover:transform hover:translate-x-2 transition-transform">
+                  <span className="text-2xl flex-shrink-0 mt-1">🌱</span>
+                  <div>
+                    <h4 className="font-semibold text-lg text-gray-800">Learn Continuously</h4>
+                    <p className="text-gray-600">Access mentorship, training, and development opportunities</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 group hover:transform hover:translate-x-2 transition-transform">
+                  <span className="text-2xl flex-shrink-0 mt-1">🤝</span>
+                  <div>
+                    <h4 className="font-semibold text-lg text-gray-800">Collaborate Fearlessly</h4>
+                    <p className="text-gray-600">Work with diverse, talented teams who challenge and support you</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Column */}
+            <div className="bg-gradient-to-br from-sunstone-blue to-blue-700 p-8 lg:p-12 flex items-center justify-center">
+              <div className="text-center">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                  Join Our Growing Team
+                </h3>
+                <p className="text-white/90 mb-8 text-lg">
+                  Be part of something extraordinary. Shape the future of education with us.
+                </p>
+                <a 
+                  href="https://www.notion.so/sunstonecareers/Open-positions-at-Sunstone-1d5cc35f259e80f8bb03e79251ccc00a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white text-sunstone-blue font-semibold px-8 py-3 rounded-lg text-lg shadow-md hover:bg-gray-100 transition-colors duration-300"
+                >
+                  View Openings
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
