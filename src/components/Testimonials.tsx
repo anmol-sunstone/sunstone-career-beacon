@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   Carousel,
@@ -37,7 +38,7 @@ const Testimonials = () => {
       name: "Shefali Sanwaria",
       position: "Product",
       quote: "Sunstone provides complete freedom and flexibility, which I really enjoy. Each day brings new challenges and hence many opportunities to learn something new and do things which are really impactful. Peers at Sunstone are extremely encouraging, and like one big family who are always around to support.",
-      image: "/lovable-uploads/131d4220-79e1-40f5-8ae9-15426d2a86f7.png"
+      image: "/lovable-uploads/e38d08e0-fb26-43ed-b98d-6b6581d01379.png"
     }
   ];
 
