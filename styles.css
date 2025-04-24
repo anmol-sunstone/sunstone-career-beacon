@@ -1,4 +1,3 @@
-
 /* Base Styles */
 :root {
     --sunstone-blue: #012F6C;
@@ -271,6 +270,16 @@ h2 {
     margin-top: 4rem;
 }
 
+.impact-content {
+    text-align: center;
+}
+
+.impact-content h3 {
+    font-size: 2rem;
+    color: var(--sunstone-blue);
+    margin-bottom: 2rem;
+}
+
 .impact-items {
     display: flex;
     flex-direction: column;
@@ -286,6 +295,7 @@ h2 {
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+    text-align: left;
 }
 
 .impact-item:hover {
@@ -304,7 +314,7 @@ h2 {
 }
 
 .impact-cta {
-    background: var(--gray-50);
+    background: #22366A;
     padding: 3rem 2rem;
     border-radius: 1rem;
     text-align: center;
@@ -317,8 +327,12 @@ h2 {
 
 .impact-cta h3 {
     font-size: 1.75rem;
-    color: var(--sunstone-blue);
+    color: white;
     margin-bottom: 1rem;
+}
+
+.impact-cta p {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Why Join Us */
@@ -360,8 +374,18 @@ h2 {
 }
 
 /* Hiring Section */
+.hiring {
+    text-align: center;
+}
+
 .hiring p {
     margin-bottom: 1.5rem;
+}
+
+.cta-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 /* Responsive Design */
