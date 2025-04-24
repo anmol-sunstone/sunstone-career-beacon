@@ -51,6 +51,11 @@ h2 {
     text-align: center;
 }
 
+/* Text alignment */
+.text-center {
+    text-align: center;
+}
+
 /* Buttons */
 .btn-primary {
     display: inline-block;
@@ -67,6 +72,12 @@ h2 {
     background-color: #b67b2a;
 }
 
+.cta-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
 /* Section Styles */
 .section {
     padding: 4rem 0;
@@ -77,6 +88,11 @@ h2 {
     height: 0.25rem;
     background-color: var(--sunstone-orange);
     margin: 1rem auto 2rem;
+}
+
+.section-description {
+    max-width: 800px;
+    margin: 0 auto 2rem;
 }
 
 .bg-gray {
@@ -120,10 +136,16 @@ h2 {
     border-radius: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    text-align: center;
 }
 
 .benefit-card:hover {
     transform: translateY(-5px);
+}
+
+.benefit-card .icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 /* Leaders Section */
@@ -152,18 +174,120 @@ h2 {
 }
 
 /* Life at Sunstone */
+.life-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 3rem auto;
+}
+
 .life-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    margin: 3rem 0;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 0.5rem;
 }
 
 .life-images img {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.life-images img:first-child {
+    display: block;
+}
+
+.carousel-controls {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control.prev {
+    margin-left: -20px;
+}
+
+.carousel-control.next {
+    margin-right: -20px;
+}
+
+/* Impact section */
+.impact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.impact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.impact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
     border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.impact-item span {
+    font-size: 2rem;
+}
+
+.impact-cta {
+    background: var(--gray-50);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+/* Why Join Us */
+.gptw-banner-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.gptw-banner {
+    max-width: 100%;
+    height: auto;
+}
+
+.why-join-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Location Section */
@@ -190,6 +314,11 @@ h2 {
     font-size: 1.5rem;
 }
 
+/* Hiring Section */
+.hiring p {
+    margin-bottom: 1.5rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     h1 {
@@ -198,10 +327,17 @@ h2 {
 
     .leaders-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .location-grid {
         grid-template-columns: 1fr;
+    }
+
+    .carousel-control {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
     }
 }
 
@@ -216,5 +352,9 @@ h2 {
 
     .hero-banner {
         height: 50vh;
+    }
+
+    .life-images {
+        height: 300px;
     }
 }

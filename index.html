@@ -26,7 +26,7 @@
         <div class="container">
             <h2>Career at Sunstone</h2>
             <div class="section-divider"></div>
-            <p class="section-description">At Sunstone, we don't just offer jobs—we create careers. Whether you're a fresh graduate or an experienced professional, our dynamic environment provides endless opportunities to grow, learn, and make an impact in the world of education.</p>
+            <p class="section-description text-center">At Sunstone, we don't just offer jobs—we create careers. Whether you're a fresh graduate or an experienced professional, our dynamic environment provides endless opportunities to grow, learn, and make an impact in the world of education.</p>
             
             <div class="benefits-grid">
                 <div class="benefit-card">
@@ -98,17 +98,23 @@
         <div class="container">
             <h2>Life at Sunstone</h2>
             <div class="section-divider"></div>
-            <h3>Work Hard, Celebrate Harder!</h3>
+            <h3 class="text-center">Work Hard, Celebrate Harder!</h3>
             
-            <div class="life-images">
-                <img src="/lovable-uploads/52f98796-9ee7-422e-a474-27588b7c9669.png" alt="Life at Sunstone">
-                <img src="/lovable-uploads/1e71b67d-9eec-4160-acdd-8a916104c083.png" alt="Life at Sunstone">
-                <img src="/lovable-uploads/d1cca07f-c291-46e6-ba0f-62c7a78f4ffb.png" alt="Life at Sunstone">
+            <div class="life-carousel">
+                <div class="life-images">
+                    <img src="/lovable-uploads/52f98796-9ee7-422e-a474-27588b7c9669.png" alt="Life at Sunstone">
+                    <img src="/lovable-uploads/1e71b67d-9eec-4160-acdd-8a916104c083.png" alt="Life at Sunstone">
+                    <img src="/lovable-uploads/d1cca07f-c291-46e6-ba0f-62c7a78f4ffb.png" alt="Life at Sunstone">
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-control prev">❮</button>
+                    <button class="carousel-control next">❯</button>
+                </div>
             </div>
 
             <div class="impact-grid">
                 <div class="impact-content">
-                    <h3>Ready to Do the Most Meaningful Work of Your Career?</h3>
+                    <h3 class="text-center">Ready to Do the Most Meaningful Work of Your Career?</h3>
                     <div class="impact-items">
                         <div class="impact-item">
                             <span>👩‍💻</span>
@@ -124,13 +130,14 @@
                                 <p>Take ownership of initiatives that directly affect thousands of students</p>
                             </div>
                         </div>
-                        <!-- More impact items... -->
                     </div>
                 </div>
                 <div class="impact-cta">
-                    <h3>Join Our Growing Team</h3>
-                    <p>Be part of something extraordinary. Shape the future of education with us.</p>
-                    <a href="https://www.notion.so/sunstonecareers/Open-positions-at-Sunstone-1d5cc35f259e80f8bb03e79251ccc00a" class="btn-primary" target="_blank" rel="noopener noreferrer">View Openings</a>
+                    <h3 class="text-center">Join Our Growing Team</h3>
+                    <p class="text-center">Be part of something extraordinary. Shape the future of education with us.</p>
+                    <div class="cta-button-container">
+                        <a href="https://www.notion.so/sunstonecareers/Open-positions-at-Sunstone-1d5cc35f259e80f8bb03e79251ccc00a" class="btn-primary" target="_blank" rel="noopener noreferrer">View Openings</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -142,11 +149,13 @@
             <h2>Why Join Us</h2>
             <div class="section-divider"></div>
             
-            <img src="/lovable-uploads/2536c168-96a3-4184-a7f1-c20d87f75e17.png" alt="Great Place to Work Banner" class="gptw-banner">
+            <div class="gptw-banner-container">
+                <img src="/lovable-uploads/2536c168-96a3-4184-a7f1-c20d87f75e17.png" alt="Great Place to Work Banner" class="gptw-banner">
+            </div>
             
             <div class="why-join-content">
-                <h3>Sunstone is Awarded with Great Place to Work!</h3>
-                <p>We are proud to be recognized as a Great Place to Work, reflecting our commitment to employee satisfaction, workplace culture, and professional growth.</p>
+                <h3 class="text-center">Sunstone is Awarded with Great Place to Work!</h3>
+                <p class="text-center">We are proud to be recognized as a Great Place to Work, reflecting our commitment to employee satisfaction, workplace culture, and professional growth.</p>
                 
                 <div class="perks-grid">
                     <!-- Perks items here -->
@@ -197,9 +206,42 @@
         <div class="container">
             <h2>Open Roles</h2>
             <div class="section-divider"></div>
-            <p>Join us to reinvent the future of education</p>
-            <a href="https://www.notion.so/sunstonecareers/Open-positions-at-Sunstone-1d5cc35f259e80f8bb03e79251ccc00a" class="btn-primary" target="_blank" rel="noopener noreferrer">View All Openings</a>
+            <p class="text-center">Join us to reinvent the future of education</p>
+            <div class="cta-button-container">
+                <a href="https://www.notion.so/sunstonecareers/Open-positions-at-Sunstone-1d5cc35f259e80f8bb03e79251ccc00a" class="btn-primary" target="_blank" rel="noopener noreferrer">View All Openings</a>
+            </div>
         </div>
     </section>
+
+    <script>
+        // Simple carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.life-images img');
+            const prevBtn = document.querySelector('.carousel-control.prev');
+            const nextBtn = document.querySelector('.carousel-control.next');
+            let currentIndex = 0;
+            
+            // Initially show only the first image
+            function showCurrentImage() {
+                images.forEach((img, index) => {
+                    img.style.display = index === currentIndex ? 'block' : 'none';
+                });
+            }
+            
+            showCurrentImage();
+            
+            // Next button click
+            nextBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex + 1) % images.length;
+                showCurrentImage();
+            });
+            
+            // Previous button click
+            prevBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showCurrentImage();
+            });
+        });
+    </script>
 </body>
 </html>
