@@ -1,0 +1,72 @@
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.impact-content {
+    text-align: center;
+}
+
+.impact-content h3 {
+    font-size: 2rem;
+    color: var(--sunstone-blue);
+    margin-bottom: 2rem;
+}
+
+.impact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.impact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.impact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.impact-item span {
+    font-size: 2.5rem;
+}
+
+.impact-item h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--sunstone-blue);
+}
+
+.impact-cta {
+    background: #22366A;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.impact-cta h3 {
+    font-size: 1.75rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.impact-cta p {
+    color: rgba(255, 255, 255, 0.9);
+}

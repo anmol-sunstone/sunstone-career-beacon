@@ -1,0 +1,24 @@
+
+.hero-banner {
+    height: 75vh;
+    background-image: linear-gradient(rgba(1, 47, 108, 0.92), rgba(1, 47, 108, 0.92)),
+                      url(https://images.unsplash.com/photo-1519389950473-47ba0277781c);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
