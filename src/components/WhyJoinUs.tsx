@@ -43,6 +43,10 @@ const WhyJoinUs = () => {
             environment that fosters innovation and collaboration.
           </p>
           
+          <p className="text-2xl font-semibold text-center text-sunstone-blue border-b border-gray-200 pb-8 mb-12">
+            But that's just the beginning!
+          </p>
+
           <p className="text-2xl font-semibold text-center text-sunstone-blue mb-12">
             Here's what makes Sunstone an exciting place to grow and thrive:
           </p>
@@ -81,15 +85,19 @@ const WhyJoinUs = () => {
                 key={index} 
                 className="bg-white rounded-2xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 border border-gray-100"
               >
-                <div className="bg-gray-50 p-4 rounded-xl inline-block mb-6">
-                  {item.icon}
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="bg-gray-50 p-4 rounded-xl">
+                    {item.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">
+                      {item.title}
+                    </h4>
+                    <p className="text-gray-600 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-4">
-                  {item.title}
-                </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  {item.desc}
-                </p>
               </div>
             ))}
           </div>
@@ -100,3 +108,4 @@ const WhyJoinUs = () => {
 };
 
 export default WhyJoinUs;
+
