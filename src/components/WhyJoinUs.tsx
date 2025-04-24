@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   TrendingUp, 
@@ -83,17 +82,17 @@ const WhyJoinUs = () => {
             ].map((item, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-2xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+                className="bg-white rounded-2xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 border border-gray-100"
               >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="bg-gray-50 p-4 rounded-xl">
+                <div className="flex items-center gap-4">
+                  <div className="bg-gray-50 p-3 rounded-xl flex-shrink-0">
                     {item.icon}
                   </div>
-                  <div className="flex-1">
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">
+                  <div>
+                    <h4 className="text-lg font-bold text-gray-900 mb-1">
                       {item.title}
                     </h4>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed text-sm">
                       {item.desc}
                     </p>
                   </div>
@@ -108,4 +107,3 @@ const WhyJoinUs = () => {
 };
 
 export default WhyJoinUs;
-
