@@ -15,7 +15,7 @@ import {
 const WhyJoinUs = () => {
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 md:px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto why-join-us">
         <h2 className="text-4xl md:text-5xl font-bold text-sunstone-blue text-center mb-4">
           Why Join Us
         </h2>
@@ -51,50 +51,46 @@ const WhyJoinUs = () => {
             Here's what makes Sunstone an exciting place to grow and thrive:
           </p>
           
-          <div className="space-y-6">
+          <div className="why-join-us-grid">
             {[
-              { icon: <Target className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
+              { icon: <Target />, 
                 title: "Impactful Work",
                 desc: "Shape the future of education and career success for students" },
-              { icon: <TrendingUp className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
+              { icon: <TrendingUp />, 
                 title: "Fast Growth",
                 desc: "Be part of an ever-growing, dynamic work environment" },
-              { icon: <Lightbulb className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
+              { icon: <Lightbulb />, 
                 title: "Innovative Culture",
                 desc: "Work with industry leaders on cutting-edge projects" },
-              { icon: <Scale className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
+              { icon: <Scale />, 
                 title: "Work-Life Balance",
                 desc: "Flexible work hours, team-building activities, and vibrant workplace culture" },
-              { icon: <GraduationCap className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
+              { icon: <GraduationCap />, 
                 title: "Learning & Development",
                 desc: "Get access to mentorship, training sessions, and career advancement opportunities" },
-              { icon: <Heart className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
+              { icon: <Heart />, 
                 title: "Health Insurance",
                 desc: "Comprehensive medical insurance for you and your family with coverage for regular checkups and emergencies" },
-              { icon: <BadgeDollarSign className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
+              { icon: <BadgeDollarSign />, 
                 title: "Employee Stock Options",
                 desc: "Be a part-owner of the company with our ESOP program, letting you share in Sunstone's success" },
-              { icon: <Handshake className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
+              { icon: <Handshake />, 
                 title: "Referral Benefits",
                 desc: "Attractive rewards for referring talented professionals who join our growing team" },
-              { icon: <Clock className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
+              { icon: <Clock />, 
                 title: "Flexible Work",
                 desc: "Hybrid work model with the flexibility to work remotely on certain days of the week" }
             ].map((item, index) => (
               <div 
                 key={index} 
-                className="flex items-center gap-4 bg-white rounded-2xl p-4 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+                className="why-join-us-item"
               >
-                <div className="bg-gray-50 p-3 rounded-xl">
+                <div className="why-join-us-icon">
                   {item.icon}
                 </div>
-                <div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-1">
-                    {item.title}
-                  </h4>
-                  <p className="text-gray-600 leading-relaxed text-sm">
-                    {item.desc}
-                  </p>
+                <div className="why-join-us-content">
+                  <h4>{item.title}</h4>
+                  <p>{item.desc}</p>
                 </div>
               </div>
             ))}
