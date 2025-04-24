@@ -1,72 +1,44 @@
 
-# Sunstone Careers Website
+# Sunstone Careers Static Website
 
-## Project Overview
-This is the careers website for Sunstone, designed to attract and engage potential talent by showcasing the company's culture, opportunities, and values.
+This is a static HTML/CSS website for Sunstone Careers.
 
-## Technologies Used
-- React
-- Vite
-- TypeScript
-- Tailwind CSS
-- Shadcn/UI
-- Embla Carousel
+## Local Development
 
-## Local Development Setup
+You can run this static site locally using the included Node.js server:
 
-### Prerequisites
-- Node.js (v18 or later)
-- npm or yarn
+```bash
+# If you have Node.js installed:
+node server.js
 
-### Installation Steps
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+# Then open your browser to:
+# http://localhost:3000
+```
 
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
+Alternatively, you can use any static file server like:
 
-## Deployment to Vercel
+- Python's built-in HTTP server:
+  ```
+  python -m http.server
+  ```
 
-### Automatic Deployment
-- This project is configured to deploy seamlessly on Vercel
-- Push to the main branch will trigger an automatic deployment
+- Live Server extension in VS Code
 
-### Manual Deployment
-1. Install Vercel CLI:
-   ```bash
-   npm install -g vercel
-   ```
+## Deployment
 
-2. Login to Vercel:
-   ```bash
-   vercel login
-   ```
+This is a static website that can be deployed to any static hosting service like:
 
-3. Deploy the project:
-   ```bash
-   vercel
-   ```
+- GitHub Pages
+- Netlify
+- Vercel
+- AWS S3
+- Firebase Hosting
 
-## Environment Variables
-No specific environment variables are required for this project.
+No build step is required since this is pure HTML/CSS.
 
-## Customization
-- Update `/src/components/Header.tsx` for banner content
-- Modify career sections in respective component files
-- Update images in the `/public/lovable-uploads/` directory
+## Structure
 
-## Performance Optimization
-- Images are optimized
-- Tailwind CSS for efficient styling
-- React SWC for fast compilation
-
-## Support
-For any issues or questions, contact the Sunstone tech team.
-
-## License
-Private - Sunstone Internal Use
+- `index.html`: The main HTML file
+- `public/styles.css`: The main stylesheet
+- `public/static/styles.css`: Additional styles
+- `public/lovable-uploads/`: Directory containing all images
