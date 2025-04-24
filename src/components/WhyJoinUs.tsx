@@ -51,52 +51,50 @@ const WhyJoinUs = () => {
             Here's what makes Sunstone an exciting place to grow and thrive:
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="space-y-6">
             {[
-              { icon: <Target className="w-8 h-8 text-sunstone-orange" />, 
+              { icon: <Target className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
                 title: "Impactful Work",
                 desc: "Shape the future of education and career success for students" },
-              { icon: <TrendingUp className="w-8 h-8 text-sunstone-orange" />, 
+              { icon: <TrendingUp className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
                 title: "Fast Growth",
                 desc: "Be part of an ever-growing, dynamic work environment" },
-              { icon: <Lightbulb className="w-8 h-8 text-sunstone-orange" />, 
+              { icon: <Lightbulb className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
                 title: "Innovative Culture",
                 desc: "Work with industry leaders on cutting-edge projects" },
-              { icon: <Scale className="w-8 h-8 text-sunstone-orange" />, 
+              { icon: <Scale className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
                 title: "Work-Life Balance",
                 desc: "Flexible work hours, team-building activities, and vibrant workplace culture" },
-              { icon: <GraduationCap className="w-8 h-8 text-sunstone-orange" />, 
+              { icon: <GraduationCap className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
                 title: "Learning & Development",
                 desc: "Get access to mentorship, training sessions, and career advancement opportunities" },
-              { icon: <Heart className="w-8 h-8 text-sunstone-orange" />, 
+              { icon: <Heart className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
                 title: "Health Insurance",
                 desc: "Comprehensive medical insurance for you and your family with coverage for regular checkups and emergencies" },
-              { icon: <BadgeDollarSign className="w-8 h-8 text-sunstone-orange" />, 
+              { icon: <BadgeDollarSign className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
                 title: "Employee Stock Options",
                 desc: "Be a part-owner of the company with our ESOP program, letting you share in Sunstone's success" },
-              { icon: <Handshake className="w-8 h-8 text-sunstone-orange" />, 
+              { icon: <Handshake className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
                 title: "Referral Benefits",
                 desc: "Attractive rewards for referring talented professionals who join our growing team" },
-              { icon: <Clock className="w-8 h-8 text-sunstone-orange" />, 
+              { icon: <Clock className="w-8 h-8 text-sunstone-orange flex-shrink-0" />, 
                 title: "Flexible Work",
                 desc: "Hybrid work model with the flexibility to work remotely on certain days of the week" }
             ].map((item, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-2xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+                className="flex items-center gap-4 bg-white rounded-2xl p-4 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 border border-gray-100"
               >
-                <div className="flex items-center gap-4">
-                  <div className="bg-gray-50 p-3 rounded-xl flex-shrink-0">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-1">
-                      {item.title}
-                    </h4>
-                    <p className="text-gray-600 leading-relaxed text-sm">
-                      {item.desc}
-                    </p>
-                  </div>
+                <div className="bg-gray-50 p-3 rounded-xl">
+                  {item.icon}
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-1">
+                    {item.title}
+                  </h4>
+                  <p className="text-gray-600 leading-relaxed text-sm">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
