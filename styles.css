@@ -99,20 +99,20 @@ h2 {
 
 /* Section Styles */
 .section {
-    padding: 6rem 0;
+    padding: 3rem 0;
 }
 
 .section-divider {
-    width: 6rem;
+    width: 4rem;
     height: 0.25rem;
     background-color: var(--sunstone-orange);
-    margin: 1.5rem auto 3rem;
+    margin: 1rem auto 2rem;
     border-radius: 2px;
 }
 
 .section-description {
     max-width: 900px;
-    margin: 0 auto 3rem;
+    margin: 0 auto 2rem;
     font-size: 1.25rem;
     line-height: 1.7;
     color: var(--gray-700);
@@ -122,8 +122,8 @@ h2 {
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
-    margin-top: 4rem;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .benefit-card {
@@ -154,8 +154,8 @@ h2 {
 .leaders-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    margin-top: 4rem;
+    gap: 2rem;
+    margin-top: 2rem;
     align-items: start;
 }
 
@@ -202,7 +202,7 @@ h2 {
 .life-carousel {
     position: relative;
     max-width: 100%;
-    margin: 3rem auto;
+    margin: 2rem auto;
 }
 
 .section-subheading {
@@ -286,8 +286,8 @@ h2 {
 .impact-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 3rem;
-    margin-top: 4rem;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .impact-content {
@@ -419,13 +419,13 @@ h2 {
     }
 
     .section {
-        padding: 4rem 0;
+        padding: 2rem 0;
     }
 
     .leaders-grid,
     .impact-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     .benefit-card,
@@ -445,7 +445,7 @@ h2 {
     }
 
     .section {
-        padding: 3rem 0;
+        padding: 1.5rem 0;
     }
 
     .hero-content p {
