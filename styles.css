@@ -1,3 +1,4 @@
+
 /* Base Styles */
 :root {
     --sunstone-blue: #012F6C;
@@ -38,70 +39,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     font-weight: 700;
     color: var(--sunstone-blue);
     text-align: center;
-}
-
-/* Text alignment */
-.text-center {
-    text-align: center;
-}
-
-/* Buttons */
-.btn-primary {
-    display: inline-block;
-    background-color: var(--sunstone-orange);
-    color: white;
-    padding: 0.75rem 2rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: #b67b2a;
-}
-
-.cta-button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 1.5rem;
-}
-
-/* Section Styles */
-.section {
-    padding: 4rem 0;
-}
-
-.section-divider {
-    width: 5rem;
-    height: 0.25rem;
-    background-color: var(--sunstone-orange);
-    margin: 1rem auto 2rem;
-}
-
-.section-description {
-    max-width: 800px;
-    margin: 0 auto 2rem;
-}
-
-.bg-gray {
-    background-color: var(--gray-50);
+    letter-spacing: -0.01em;
 }
 
 /* Hero Banner */
 .hero-banner {
-    height: 65vh;
-    background-image: linear-gradient(rgba(1, 47, 108, 0.85), rgba(1, 47, 108, 0.85)),
+    height: 75vh;
+    background-image: linear-gradient(rgba(1, 47, 108, 0.92), rgba(1, 47, 108, 0.92)),
                       url(https://images.unsplash.com/photo-1519389950473-47ba0277781c);
     background-size: cover;
     background-position: center;
@@ -113,38 +68,87 @@ h2 {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
-.text-orange {
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--sunstone-orange);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--sunstone-orange);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
     color: var(--sunstone-orange);
+    transform: translateY(-2px);
+}
+
+/* Section Styles */
+.section {
+    padding: 6rem 0;
+}
+
+.section-divider {
+    width: 6rem;
+    height: 0.25rem;
+    background-color: var(--sunstone-orange);
+    margin: 1.5rem auto 3rem;
+    border-radius: 2px;
+}
+
+.section-description {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--gray-700);
 }
 
 /* Benefits Grid */
 .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
 }
 
 .benefit-card {
     background: white;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    text-align: center;
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
 .benefit-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .benefit-card .icon {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-card h4 {
+    font-size: 1.25rem;
     margin-bottom: 1rem;
+    color: var(--sunstone-blue);
 }
 
 /* Leaders Section */
@@ -152,24 +156,47 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
+    align-items: start;
+}
+
+.leaders-text {
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+.leaders-text p {
+    margin-bottom: 1.5rem;
 }
 
 .leader-card {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     background: white;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.leader-card:hover {
+    transform: translateY(-3px);
 }
 
 .leader-card img {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     object-fit: cover;
+    border: 3px solid var(--sunstone-orange);
+}
+
+.leader-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--sunstone-blue);
 }
 
 /* Life at Sunstone */
@@ -240,67 +267,72 @@ h2 {
 .impact-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 3rem;
+    margin-top: 4rem;
 }
 
 .impact-items {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 2rem;
 }
 
 .impact-item {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
-    padding: 1.5rem;
+    gap: 1.5rem;
+    padding: 2rem;
     background: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
 .impact-item:hover {
     transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .impact-item span {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .impact-item h4 {
-    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
     color: var(--sunstone-blue);
 }
 
 .impact-cta {
     background: var(--gray-50);
-    padding: 2rem;
-    border-radius: 0.5rem;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 1.5rem;
+}
+
+.impact-cta h3 {
+    font-size: 1.75rem;
+    color: var(--sunstone-blue);
+    margin-bottom: 1rem;
 }
 
 /* Why Join Us */
 .gptw-banner-container {
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 3rem 0;
 }
 
 .gptw-banner {
     max-width: 100%;
     height: auto;
-}
-
-.why-join-content {
-    max-width: 800px;
-    margin: 0 auto;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* Location Section */
@@ -335,39 +367,50 @@ h2 {
 /* Responsive Design */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
-    .leaders-grid {
+    h2 {
+        font-size: 2.25rem;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+
+    .leaders-grid,
+    .impact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
-    .impact-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .location-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .carousel-control {
-        width: 30px;
-        height: 30px;
-        font-size: 1.2rem;
+    .benefit-card,
+    .impact-item,
+    .leader-card {
+        padding: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero-banner {
-        height: 50vh;
+        height: 60vh;
     }
 
-    .life-images {
-        height: 300px;
+    .section {
+        padding: 3rem 0;
+    }
+
+    .hero-content p {
+        font-size: 1.25rem;
+    }
+
+    .benefit-card,
+    .impact-item,
+    .leader-card {
+        padding: 1.25rem;
     }
 }
