@@ -1,4 +1,4 @@
-/* Base Styles */
+
 :root {
     --sunstone-blue: #012F6C;
     --sunstone-orange: #c88c32;
@@ -17,15 +17,14 @@
 
 html {
     scroll-behavior: smooth;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
     line-height: 1.5;
     color: var(--gray-800);
 }
 
-/* Container */
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -52,21 +51,38 @@ h2 {
     letter-spacing: -0.01em;
 }
 
+.section-subheading {
+    font-size: 1.75rem;
+    color: var(--gray-800);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
 /* Hero Banner */
 .hero-banner {
     height: 75vh;
+    position: relative;
     background-image: linear-gradient(rgba(1, 47, 108, 0.92), rgba(1, 47, 108, 0.92)),
                       url(https://images.unsplash.com/photo-1519389950473-47ba0277781c);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     display: flex;
     align-items: center;
     color: white;
     text-align: center;
 }
 
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .hero-content {
+    position: relative;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -77,8 +93,12 @@ h2 {
     opacity: 0.9;
 }
 
+.text-accent {
+    color: var(--sunstone-orange);
+}
+
 /* Buttons */
-.btn-primary {
+.cta-button {
     display: inline-block;
     background-color: var(--sunstone-orange);
     color: white;
@@ -91,14 +111,20 @@ h2 {
     border: 2px solid var(--sunstone-orange);
 }
 
-.btn-primary:hover {
+.cta-button:hover {
     background-color: transparent;
     color: var(--sunstone-orange);
     transform: translateY(-2px);
 }
 
+.cta-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
 /* Section Styles */
-.section {
+section {
     padding: 3rem 0;
 }
 
@@ -116,6 +142,7 @@ h2 {
     font-size: 1.25rem;
     line-height: 1.7;
     color: var(--gray-700);
+    text-align: center;
 }
 
 /* Benefits Grid */
@@ -132,6 +159,7 @@ h2 {
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .benefit-card:hover {
@@ -139,8 +167,9 @@ h2 {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-.benefit-card .icon {
-    font-size: 2.5rem;
+.benefit-icon {
+    display: flex;
+    justify-content: center;
     margin-bottom: 1.5rem;
 }
 
@@ -162,10 +191,16 @@ h2 {
 .leaders-text {
     font-size: 1.125rem;
     line-height: 1.7;
+    text-align: left;
 }
 
 .leaders-text p {
     margin-bottom: 1.5rem;
+}
+
+.leaders-cards {
+    display: grid;
+    gap: 1.5rem;
 }
 
 .leader-card {
@@ -175,7 +210,6 @@ h2 {
     background: white;
     padding: 1.5rem;
     border-radius: 1rem;
-    margin-bottom: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 }
@@ -198,39 +232,15 @@ h2 {
     color: var(--sunstone-blue);
 }
 
-/* Life at Sunstone */
-.life-carousel {
-    position: relative;
-    max-width: 100%;
-    margin: 2rem auto;
-}
-
-.section-subheading {
-    font-size: 1.75rem;
-    color: var(--gray-800);
-    text-align: center;
-    margin-bottom: 2rem;
-    font-weight: 500;
-}
-
+/* Life at Sunstone Section */
 .life-images {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
     gap: 1rem;
-    padding: 1rem;
-    -ms-overflow-style: none;  /* Hide scrollbar IE and Edge */
-    scrollbar-width: none;  /* Hide scrollbar Firefox */
-}
-
-.life-images::-webkit-scrollbar {
-    display: none;  /* Hide scrollbar Chrome, Safari, Opera */
+    overflow-x: auto;
 }
 
 .life-images img {
-    scroll-snap-align: start;
-    flex: 0 0 calc(33.333% - 0.67rem); /* Show exactly 3 images */
-    min-width: calc(33.333% - 0.67rem);
+    flex: 0 0 calc(33.333% - 0.67rem);
     height: 300px;
     object-fit: cover;
     border-radius: 0.5rem;
@@ -242,131 +252,29 @@ h2 {
     transform: translateY(-5px);
 }
 
-.carousel-controls {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.carousel-control {
-    background: rgba(1, 47, 108, 0.9);
-    color: white;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-}
-
-.carousel-control:hover {
-    background: var(--sunstone-blue);
-}
-
-@media (max-width: 768px) {
-    .life-images img {
-        flex: 0 0 calc(50% - 0.5rem);
-        min-width: calc(50% - 0.5rem);
-    }
-}
-
-@media (max-width: 480px) {
-    .life-images img {
-        flex: 0 0 100%;
-        min-width: 100%;
-    }
-}
-
-/* Impact section */
-.impact-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.impact-content {
-    text-align: center;
-}
-
-.impact-content h3 {
-    font-size: 2rem;
-    color: var(--sunstone-blue);
-    margin-bottom: 2rem;
-}
-
-.impact-items {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.impact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    padding: 2rem;
-    background: white;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    text-align: left;
-}
-
-.impact-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.impact-item span {
-    font-size: 2.5rem;
-}
-
-.impact-item h4 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: var(--sunstone-blue);
-}
-
-.impact-cta {
-    background: #22366A;
-    padding: 3rem 2rem;
-    border-radius: 1rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.impact-cta h3 {
-    font-size: 1.75rem;
-    color: white;
-    margin-bottom: 1rem;
-}
-
-.impact-cta p {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-/* Why Join Us */
+/* Why Join Us Section */
 .gptw-banner-container {
     display: flex;
     justify-content: center;
-    margin: 3rem 0;
+    margin: 2rem 0;
 }
 
 .gptw-banner {
     max-width: 100%;
     height: auto;
     border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.why-join-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.why-join-content h3 {
+    font-size: 1.75rem;
+    color: var(--sunstone-blue);
+    margin-bottom: 1rem;
 }
 
 /* Location Section */
@@ -374,7 +282,7 @@ h2 {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .contact-info {
@@ -385,27 +293,92 @@ h2 {
 
 .contact-item {
     display: flex;
+    align-items: center;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .contact-item .icon {
     font-size: 1.5rem;
 }
 
-/* Hiring Section */
-.hiring {
-    text-align: center;
-}
-
-.hiring p {
-    margin-bottom: 1.5rem;
-}
-
-.cta-button-container {
-    display: flex;
-    justify-content: center;
+/* Testimonials Section */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
     margin-top: 2rem;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    border: 4px solid var(--sunstone-blue);
+}
+
+.testimonial-author {
+    margin-top: 1rem;
+}
+
+.testimonial-author h4 {
+    font-size: 1.125rem;
+    color: var(--sunstone-blue);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--sunstone-blue);
+    color: white;
+    padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-section a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Responsive Design */
@@ -423,14 +396,22 @@ h2 {
     }
 
     .leaders-grid,
-    .impact-grid {
+    .location-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
+    .life-images {
+        flex-direction: column;
+    }
+
+    .life-images img {
+        flex: 0 0 100%;
+    }
+
     .benefit-card,
-    .impact-item,
-    .leader-card {
+    .leader-card,
+    .testimonial-card {
         padding: 1.5rem;
     }
 }
@@ -453,8 +434,8 @@ h2 {
     }
 
     .benefit-card,
-    .impact-item,
-    .leader-card {
+    .leader-card,
+    .testimonial-card {
         padding: 1.25rem;
     }
 }
