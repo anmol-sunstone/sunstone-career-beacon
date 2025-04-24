@@ -239,30 +239,27 @@
     <script>
         // Simple carousel functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('.life-images img');
+            const carousel = document.querySelector('.life-images');
             const prevBtn = document.querySelector('.carousel-control.prev');
             const nextBtn = document.querySelector('.carousel-control.next');
-            let currentIndex = 0;
             
-            // Initially show only the first image
-            function showCurrentImage() {
-                images.forEach((img, index) => {
-                    img.style.display = index === currentIndex ? 'block' : 'none';
-                });
-            }
-            
-            showCurrentImage();
+            // Set scroll amount to approximately one image width plus gap
+            const scrollAmount = carousel.offsetWidth / 3;
             
             // Next button click
             nextBtn.addEventListener('click', function() {
-                currentIndex = (currentIndex + 1) % images.length;
-                showCurrentImage();
+                carousel.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
             });
             
             // Previous button click
             prevBtn.addEventListener('click', function() {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
-                showCurrentImage();
+                carousel.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
