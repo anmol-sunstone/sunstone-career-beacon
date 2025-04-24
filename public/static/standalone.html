@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunstone Careers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Root Variables */
+        :root {
+            --sunstone-blue: #012F6C;
+            --sunstone-orange: #c88c32;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+        }
+
+        /* Base Styles */
+        :root {
+            --sunstone-blue: #012F6C;
+            --sunstone-orange: #c88c32;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: var(--gray-800);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: var(--sunstone-blue);
+            text-align: center;
+            letter-spacing: -0.01em;
+        }
+
+        /* Hero Banner */
+        .hero-banner {
+            height: 75vh;
+            background-image: linear-gradient(rgba(1, 47, 108, 0.92), rgba(1, 47, 108, 0.92)),
+                              url(https://images.unsplash.com/photo-1519389950473-47ba0277781c);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--sunstone-orange);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--sunstone-orange);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--sunstone-orange);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 3rem 0;
+        }
+
+        .section-divider {
+            width: 4rem;
+            height: 0.25rem;
+            background-color: var(--sunstone-orange);
+            margin: 1rem auto 2rem;
+            border-radius: 2px;
+        }
+
+        .section-description {
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: var(--gray-700);
+        }
+
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefit-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--sunstone-blue);
+        }
+
+        /* Leaders Section */
+        .leaders-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+            align-items: start;
+        }
+
+        .leaders-text {
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+
+        .leaders-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .leader-card {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .leader-card img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--sunstone-orange);
+        }
+
+        .leader-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--sunstone-blue);
+        }
+
+        /* Life at Sunstone */
+        .life-carousel {
+            position: relative;
+            max-width: 100%;
+            margin: 2rem auto;
+        }
+
+        .section-subheading {
+            font-size: 1.75rem;
+            color: var(--gray-800);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .life-images {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 1rem;
+            padding: 1rem;
+            -ms-overflow-style: none;  /* Hide scrollbar IE and Edge */
+            scrollbar-width: none;  /* Hide scrollbar Firefox */
+        }
+
+        .life-images::-webkit-scrollbar {
+            display: none;  /* Hide scrollbar Chrome, Safari, Opera */
+        }
+
+        .life-images img {
+            scroll-snap-align: start;
+            flex: 0 0 calc(33.333% - 0.67rem); /* Show exactly 3 images */
+            min-width: calc(33.333% - 0.67rem);
+            height: 300px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .life-images img:hover {
+            transform: translateY(-5px);
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .carousel-control {
+            background: rgba(1, 47, 108, 0.9);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-control:hover {
+            background: var(--sunstone-blue);
+        }
+
+        @media (max-width: 768px) {
+            .life-images img {
+                flex: 0 0 calc(50% - 0.5rem);
+                min-width: calc(50% - 0.5rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .life-images img {
+                flex: 0 0 100%;
+                min-width: 100%;
+            }
+        }
+
+        /* Impact section */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .impact-content {
+            text-align: center;
+        }
+
+        .impact-content h3 {
+            font-size: 2rem;
+            color: var(--sunstone-blue);
+            margin-bottom: 2rem;
+        }
+
+        .impact-items {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .impact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .impact-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .impact-item span {
+            font-size: 2.5rem;
+        }
+
+        .impact-item h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--sunstone-blue);
+        }
+
+        .impact-cta {
+            background: #22366A;
+            padding: 3rem 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .impact-cta h3 {
+            font-size: 1.75rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .impact-cta p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Why Join Us */
+        .gptw-banner-container {
+            display: flex;
+            justify-content: center;
+            margin: 3rem 0;
+        }
+
+        .gptw-banner {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Location Section */
+        .location-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            background: var(--gray-50);
+            padding: 2rem;
+            border-radius: 0.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item .icon {
+            font-size: 1.5rem;
+        }
+
+        /* Hiring Section */
+        .hiring {
+            text-align: center;
+        }
+
+        .hiring p {
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 2.25rem;
+            }
+
+            .section {
+                padding: 2rem 0;
+            }
+
+            .leaders-grid,
+            .impact-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .benefit-card,
+            .impact-item,
+            .leader-card {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-banner {
+                height: 60vh;
+            }
+
+            .section {
+                padding: 1.5rem 0;
+            }
+
+            .hero-content p {
+                font-size: 1.25rem;
+            }
+
+            .benefit-card,
+            .impact-item,
+            .leader-card {
+                padding: 1.25rem;
+            }
+        }
+
+        /* Career Page Custom Styling */
+        .hero-banner {
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          position: relative;
+        }
+
+        .hero-banner::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(rgba(1, 47, 108, 0.85), rgba(1, 47, 108, 0.85));
+        }
+
+        /* Button styling */
+        .sunstone-button {
+          transition: all 0.3s ease;
+        }
+
+        .sunstone-button:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Card hover effects */
+        .benefit-card {
+          transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 15px 25px rgba(1, 47, 108, 0.08);
+        }
+
+        /* Smooth scroll behavior */
+        html {
+          scroll-behavior: smooth;
+        }
+
+        /* Animation classes */
+        .fade-in {
+          animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background: #012F6C;
+          border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+          background: #c88c32;
+        }
+
+        /* Section animations */
+        section {
+          position: relative;
+          overflow: hidden;
+        }
+
+        /* Responsive container */
+        .container {
+          width: 100%;
+          padding-right: 15px;
+          padding-left: 15px;
+          margin-right: auto;
+          margin-left: auto;
+        }
+
+        @media (min-width: 640px) {
+          .container {
+            max-width: 640px;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .container {
+            max-width: 768px;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .container {
+            max-width: 1024px;
+          }
+        }
+
+        @media (min-width: 1280px) {
+          .container {
+            max-width: 1280px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="hero-banner">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Build Your Career <span class="text-accent">With Us</span></h1>
+                <p>Work with purpose, grow with passion</p>
+                <a href="#open-roles" class="cta-button">Join Our Team</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Career Intro Section -->
+        <section class="career-intro">
+            <div class="container">
+                <h2>Career at Sunstone</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">At Sunstone, we don't just offer jobs—we create careers. Whether you're a fresh graduate or an experienced professional, our dynamic environment provides endless opportunities to grow, learn, and make an impact in the world of education.</p>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 3H8C9.06087 3 10.0783 3.42143 10.8284 4.17157C11.5786 4.92172 12 5.93913 12 7V21C12 20.2044 11.6839 19.4413 11.1213 18.8787C10.5587 18.3161 9.79565 18 9 18H2V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 3H16C14.9391 3 13.9217 3.42143 13.1716 4.17157C12.4214 4.92172 12 5.93913 12 7V21C12 20.2044 12.3161 19.4413 12.8787 18.8787C13.4413 18.3161 14.2044 18 15 18H22V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h4>Challenging and meaningful projects</h4>
+                        <p>Work on projects that impact thousands of students across India</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h4>Continuous Learning</h4>
+                        <p>Grow your skills with cutting-edge educational technologies</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h4>Collaborative Culture</h4>
+                        <p>Work with a team that values teamwork and innovation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet Leaders Section -->
+        <section class="meet-leaders">
+            <div class="container">
+                <h2>Meet Our Leaders</h2>
+                <div class="section-divider"></div>
+                <div class="leaders-grid">
+                    <div class="leaders-text">
+                        <p>At Sunstone, we bring together the best of learning and industry practices to ensure that students are transformed into professionals who are noticed by employers.</p>
+                        <p>We believe in an education that imparts the right knowledge while equipping you with the skills and experiences necessary to thrive in real-world scenarios.</p>
+                        <p>Sunstone is transforming India's future workforce, one student at a time, and we proudly invite you to take the first step towards your dream job with us!</p>
+                    </div>
+                    <div class="leaders-cards">
+                        <div class="leader-card">
+                            <img src="https://lovable-uploads.s3.amazonaws.com/2e904963-79ce-4c13-9b81-8c21fd7e32a0.png" alt="Ashish Munjal">
+                            <div class="leader-info">
+                                <h3>Ashish Munjal</h3>
+                                <p>Co-founder & CEO</p>
+                            </div>
+                        </div>
+                        <div class="leader-card">
+                            <img src="https://lovable-uploads.s3.amazonaws.com/40907d23-dd16-470b-ac4e-5a32e1e75ca9.png" alt="Mayank Goyal">
+                            <div class="leader-info">
+                                <h3>Mayank Goyal</h3>
+                                <p>Co-founder & MD</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Life at Sunstone Section -->
+        <section class="life-at-sunstone">
+            <div class="container">
+                <h2>Life at Sunstone</h2>
+                <div class="section-divider"></div>
+                <h3 class="section-subheading">Work Hard, Celebrate Harder!</h3>
+                
+                <div class="life-images">
+                    <img src="https://lovable-uploads.s3.amazonaws.com/52f98796-9ee7-422e-a474-27588b7c9669.png" alt="Life at Sunstone 1">
+                    <img src="https://lovable-uploads.s3.amazonaws.com/1e71b67d-9eec-4160-acdd-8a916104c083.png" alt="Life at Sunstone 2">
+                    <img src="https://lovable-uploads.s3.amazonaws.com/d1cca07f-c291-46e6-ba0f-62c7a78f4ffb.png" alt="Life at Sunstone 3">
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Join Us Section -->
+        <section class="why-join-us">
+            <div class="container">
+                <h2>Why Join Us</h2>
+                <div class="section-divider"></div>
+                
+                <div class="gptw-banner-container">
+                    <img class="gptw-banner" src="https://lovable-uploads.s3.amazonaws.com/2536c168-96a3-4184-a7f1-c20d87f75e17.png" alt="Great Place to Work Banner">
+                </div>
+                
+                <div class="why-join-content">
+                    <h3>Sunstone is Awarded with Great Place to Work!</h3>
+                    <p>We are proud to be recognized as a Great Place to Work, reflecting our commitment to employee satisfaction, workplace culture, and professional growth.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section class="location">
+            <div class="container">
+                <h2>Location</h2>
+                <div class="section-divider"></div>
+                
+                <div class="location-grid">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.1145672512577!2d77.04198827566707!3d28.47015897583272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18efa878f2d3%3A0x12e12165962daa21!2sUnitech%20Cyber%20Park!5e0!3m2!1sen!2sin!4v1719183565527!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <span class="icon">📍</span>
+                            <p>Unitech Cyber Park, Sector 39, Gurugram</p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">✉️</span>
+                            <p>careers@sunstone.edu.in</p>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📞</span>
+                            <p>+91 9999 888 777</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hiring Section -->
+        <section class="hiring" id="open-roles">
+            <div class="container">
+                <h2>Open Roles</h2>
+                <div class="section-divider"></div>
+                <p>Join us to reinvent the future of education</p>
+                <div class="cta-button-container">
+                    <a href="https://www.notion.so/sunstonecareers/Open-positions-at-Sunstone-1d5cc35f259e80f8bb03e79251ccc00a" class="cta-button" target="_blank" rel="noopener noreferrer">View All Openings</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>Hear from our team</h2>
+                <h3 class="section-subheading">Know what it's like to work at Sunstone</h3>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <img src="https://lovable-uploads.s3.amazonaws.com/5d6d6563-ffae-4e9c-99a2-be5986cdc87a.png" alt="Rinky Singh">
+                        <blockquote>People I work with at Sunstone give me the freedom to be myself, and I see myself growing as an individual.</blockquote>
+                        <div class="testimonial-author">
+                            <h4>Rinky Singh</h4>
+                            <p>Marketing</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://lovable-uploads.s3.amazonaws.com/0c451bab-6e54-4605-a7bf-3d3b9aaf9771.png" alt="Mohit Kumar">
+                        <blockquote>Sunstone offers an environment where innovation meets opportunity, and every day is a chance to make a difference.</blockquote>
+                        <div class="testimonial-author">
+                            <h4>Mohit Kumar</h4>
+                            <p>Technology</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="https://lovable-uploads.s3.amazonaws.com/1a088bf7-cb37-4c08-846f-c879f0173372.png" alt="Priya Sharma">
+                        <blockquote>The learning and growth opportunities at Sunstone are incredible. I've transformed both professionally and personally.</blockquote>
+                        <div class="testimonial-author">
+                            <h4>Priya Sharma</h4>
+                            <p>Operations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Sunstone</h3>
+                    <p>Sunstone is transforming higher education in India with its unique pay-after-placement model and industry-aligned curriculum.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#open-roles">Open Roles</a></li>
