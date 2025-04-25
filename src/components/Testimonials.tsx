@@ -11,12 +11,6 @@ import {
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Rinky Singh",
-      position: "Marketing",
-      quote: "People I work with at Sunstone give me the freedom to be myself, and I see myself growing as an individual. The focus on ethics in whatever we do are the things that stand out the most to me. My time here in such a forward-thinking, fast-paced environment has given me an unparalleled experience.",
-      image: "/lovable-uploads/5d6d6563-ffae-4e9c-99a2-be5986cdc87a.png"
-    },
-    {
       name: "Arpit Sarda",
       position: "Business",
       quote: "At Sunstone, you surround yourself with highly driven people who bring their hearts to work. All our daily discussions are anchored in one core belief - \"Is it right for the student?\" A workplace with such strong values is bound to bring out the best in you.",
@@ -102,3 +96,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
