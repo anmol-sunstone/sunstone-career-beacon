@@ -8,6 +8,7 @@ import WhyJoinUs from '@/components/WhyJoinUs';
 import LocationSection from '@/components/LocationSection';
 import HiringSection from '@/components/HiringSection';
 import Testimonials from '@/components/Testimonials';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
         <HiringSection />
         <Testimonials />
       </main>
+      <Footer />
     </div>
   );
 };
