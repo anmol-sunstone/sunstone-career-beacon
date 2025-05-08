@@ -14,7 +14,7 @@ const HiringSection = () => {
           href="https://www.notion.so/sunstonecareers/Open-positions-at-Sunstone-1d5cc35f259e80f8bb03e79251ccc00a"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-sunstone-blue text-white font-semibold px-8 py-3 rounded-md text-lg shadow-md hover:bg-opacity-90 transition-all duration-300"
+          className="inline-block bg-sunstone-orange hover:bg-white text-white hover:text-sunstone-blue font-semibold px-8 py-3 rounded-md text-lg shadow-md transition-all duration-300 border border-sunstone-orange"
         >
           View All Openings
         </a>

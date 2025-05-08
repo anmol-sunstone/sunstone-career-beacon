@@ -90,10 +90,12 @@ h2 {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
+    border: 2px solid var(--sunstone-orange);
 }
 
 .cta-button:hover {
-    background-color: #b67b2a;
+    background-color: white;
+    color: var(--sunstone-blue);
     transform: translateY(-2px);
 }
 
