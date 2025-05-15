@@ -1,18 +1,16 @@
 
 import React from 'react';
 import { 
+  Target,
   TrendingUp, 
-  Scale, 
-  Target, 
   Lightbulb, 
+  Scale, 
   GraduationCap, 
   Heart,
   BadgeDollarSign,
   Clock,
-  Handshake,
-  BookOpen,
   Users,
-  Rocket
+  Handshake
 } from 'lucide-react';
 
 const WhyJoinUs = () => {
