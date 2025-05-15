@@ -430,9 +430,6 @@
         /* Benefits List */
         .benefits-list {
             margin: 2rem 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
         }
         
         .benefit-item {
@@ -442,9 +439,9 @@
             background: white;
             padding: 1.5rem;
             border-radius: 1rem;
+            margin-bottom: 1rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
-            height: 100%;
         }
         
         .benefit-item:hover {
@@ -461,13 +458,6 @@
             justify-content: center;
             color: var(--sunstone-orange);
             font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-        
-        .benefit-info {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
         }
         
         .benefit-info h4 {
@@ -596,10 +586,6 @@
             .leader-card {
                 padding: 1.5rem;
             }
-            
-            .benefits-list {
-                grid-template-columns: 1fr;
-            }
         }
 
         @media (max-width: 480px) {
@@ -655,14 +641,11 @@
 
         .growth-card {
             background: white;
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 1rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             text-align: left;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
         }
 
         .growth-card:hover {
@@ -673,7 +656,7 @@
         .growth-card h3 {
             color: var(--sunstone-blue);
             font-size: 1.5rem;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
             gap: 1rem;
@@ -681,11 +664,6 @@
 
         .growth-card h3 span {
             font-size: 1.75rem;
-        }
-
-        .growth-card p {
-            margin: 0;
-            line-height: 1.5;
         }
 
         /* Ready Section */
@@ -1013,7 +991,7 @@
                         <div class="benefit-item">
                             <div class="benefit-icon">
                                 <!-- Handshake icon - matching WhyJoinUs.tsx -->
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M14.8 9.8 19 14h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2.5a2 2 0 0 0-1.4.6L14.8 9.8Z"></path>
                                     <path d="m14.8 14.2 4.2-4.2"></path>
                                     <path d="M9.2 14.2 5 10H3a2 2 0 0 1-2 2v2a2 2 0 0 1 2 2h2.5a2 2 0 0 1 1.4-.6L9.2 14.2Z"></path>
