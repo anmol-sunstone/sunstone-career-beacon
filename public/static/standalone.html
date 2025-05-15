@@ -164,22 +164,27 @@
             color: var(--sunstone-blue);
         }
 
-        /* Leaders Section - Updated for Equal Height */
+        /* Leaders Section - Completely Revised */
         .leaders-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 3rem;
             align-items: start;
+            max-width: 1100px;
+            margin: 3rem auto 0;
         }
 
         .leaders-text {
-            font-size: 1.125rem;
-            line-height: 1.7;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
 
         .leaders-text p {
-            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--gray-700);
+            margin: 0;
         }
 
         .leaders-cards {
@@ -192,12 +197,11 @@
             display: flex;
             align-items: center;
             gap: 1.5rem;
-            background: white;
             padding: 1.5rem;
-            border-radius: 1rem;
+            background: white;
+            border-radius: 0.75rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
-            height: 100%;
         }
 
         .leader-card:hover {
@@ -205,8 +209,8 @@
         }
 
         .leader-card img {
-            width: 90px;
-            height: 90px;
+            width: 5rem;
+            height: 5rem;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--sunstone-orange);
@@ -216,13 +220,13 @@
         .leader-info {
             display: flex;
             flex-direction: column;
-            justify-content: center;
         }
 
         .leader-info h3 {
             font-size: 1.25rem;
-            margin-bottom: 0.5rem;
+            margin: 0 0 0.25rem;
             color: var(--sunstone-blue);
+            font-weight: 600;
         }
 
         .leader-info p {
@@ -769,17 +773,19 @@
             </div>
         </section>
 
-        <!-- Meet Leaders Section - Updated structure -->
-        <section class="meet-leaders">
+        <!-- Meet Leaders Section - Completely Revised -->
+        <section class="meet-leaders" style="padding: 4rem 0; background-color: var(--gray-50);">
             <div class="container">
                 <h2>Meet Our Leaders</h2>
                 <div class="section-divider"></div>
+                
                 <div class="leaders-grid">
                     <div class="leaders-text">
                         <p>At Sunstone, we bring together the best of learning and industry practices to ensure that students are transformed into professionals who are noticed by employers.</p>
                         <p>We believe in an education that imparts the right knowledge while equipping you with the skills and experiences necessary to thrive in real-world scenarios.</p>
                         <p>Sunstone is transforming India's future workforce, one student at a time, and we proudly invite you to take the first step towards your dream job with us!</p>
                     </div>
+                    
                     <div class="leaders-cards">
                         <div class="leader-card">
                             <img src="./images/ashish-munjal.png" alt="Ashish Munjal">
