@@ -164,7 +164,7 @@
             color: var(--sunstone-blue);
         }
 
-        /* Leaders Section */
+        /* Leaders Section - Updated for Equal Height */
         .leaders-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -182,6 +182,12 @@
             margin-bottom: 1.5rem;
         }
 
+        .leaders-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
         .leader-card {
             display: flex;
             align-items: center;
@@ -189,9 +195,9 @@
             background: white;
             padding: 1.5rem;
             border-radius: 1rem;
-            margin-bottom: 1.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
+            height: 100%;
         }
 
         .leader-card:hover {
@@ -204,12 +210,24 @@
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--sunstone-orange);
+            flex-shrink: 0;
+        }
+
+        .leader-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .leader-info h3 {
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
             color: var(--sunstone-blue);
+        }
+
+        .leader-info p {
+            margin: 0;
+            color: var(--gray-700);
         }
 
         /* Life at Sunstone */
@@ -751,7 +769,7 @@
             </div>
         </section>
 
-        <!-- Meet Leaders Section -->
+        <!-- Meet Leaders Section - Updated structure -->
         <section class="meet-leaders">
             <div class="container">
                 <h2>Meet Our Leaders</h2>
@@ -928,7 +946,7 @@
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                     <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M23 21v-2a4 4 0 0 1 0 7.75"></path>
                                     <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                                 </svg>
                             </div>
