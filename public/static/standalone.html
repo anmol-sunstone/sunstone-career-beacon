@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -521,6 +522,81 @@
             font-style: italic;
             margin: 1rem 0;
         }
+
+        /* Growth Section */
+        .growth-section {
+            background-color: var(--gray-50);
+            padding: 4rem 0;
+        }
+
+        .growth-heading {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .growth-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .growth-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .growth-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .growth-card h3 {
+            color: var(--sunstone-blue);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .growth-card h3 span {
+            font-size: 1.75rem;
+        }
+
+        /* Ready Section */
+        .ready-section {
+            background-color: var(--sunstone-blue);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .ready-section h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .ready-section p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .ready-section .cta-button {
+            background-color: white;
+            color: var(--sunstone-blue);
+            border-color: white;
+        }
+
+        .ready-section .cta-button:hover {
+            background-color: transparent;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -573,6 +649,48 @@
                         </div>
                         <h4>Collaborative Culture</h4>
                         <p>Work with a team that values teamwork and innovation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Growth Section -->
+        <section class="growth-section">
+            <div class="container">
+                <div class="growth-heading">
+                    <h2>Here's what makes Sunstone an exciting place to grow and thrive:</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="growth-grid">
+                    <div class="growth-card">
+                        <h3><span>🚀</span> Growth Opportunities</h3>
+                        <p>We believe in promoting from within. Your career trajectory is limited only by your ambition and performance. Regular feedback sessions and clear growth paths help you advance.</p>
+                    </div>
+                    
+                    <div class="growth-card">
+                        <h3><span>🎯</span> Ownership & Autonomy</h3>
+                        <p>We trust our team members with real responsibility. You'll have the freedom to own projects, make decisions, and directly influence our success.</p>
+                    </div>
+                    
+                    <div class="growth-card">
+                        <h3><span>🌱</span> Learning & Development</h3>
+                        <p>Continuous learning is in our DNA. From mentorship programs to learning budgets, we invest heavily in helping you develop new skills and expertise.</p>
+                    </div>
+                    
+                    <div class="growth-card">
+                        <h3><span>🎮</span> Work-Life Balance</h3>
+                        <p>We understand that productivity comes from well-rested, balanced individuals. Flexible work arrangements, wellness programs, and reasonable hours ensure you thrive professionally and personally.</p>
+                    </div>
+                    
+                    <div class="growth-card">
+                        <h3><span>🏆</span> Recognition Culture</h3>
+                        <p>Your contributions won't go unnoticed. We celebrate wins, acknowledge hard work, and ensure that exceptional performance is rewarded.</p>
+                    </div>
+                    
+                    <div class="growth-card">
+                        <h3><span>💼</span> Competitive Benefits</h3>
+                        <p>Beyond competitive salaries, we offer comprehensive health coverage, retirement plans, and other benefits that show we value our team members' well-being.</p>
                     </div>
                 </div>
             </div>
@@ -645,6 +763,15 @@
                     <h3>Sunstone is Awarded with Great Place to Work!</h3>
                     <p>We are proud to be recognized as a Great Place to Work, reflecting our commitment to employee satisfaction, workplace culture, and professional growth.</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- Ready Section -->
+        <section class="ready-section">
+            <div class="container">
+                <h2>Ready to Do the Most Meaningful Work of Your Career?</h2>
+                <p>Join our team of passionate individuals who are revolutionizing higher education in India and making a real difference in students' lives.</p>
+                <a href="#open-roles" class="cta-button">Explore Opportunities</a>
             </div>
         </section>
 
