@@ -9,7 +9,10 @@ import {
   Heart,
   BadgeDollarSign,
   Clock,
-  Handshake
+  Handshake,
+  BookOpen,
+  Users,
+  Rocket
 } from 'lucide-react';
 
 const WhyJoinUs = () => {
